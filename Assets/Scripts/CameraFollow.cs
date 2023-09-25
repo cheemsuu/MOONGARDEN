@@ -32,8 +32,8 @@ public class CameraFollow : MonoBehaviour
          
         //move the camera to that location
         transform.position = smoothedPosition;
-     float NewX  = Mathf.Clamp(transform.position.x, minX, maxX);
-     float NewY = Mathf.Clamp(transform.position.y, minY, maxY);
+        float NewX  = Mathf.Clamp(transform.position.x, minX, maxX);
+        float NewY = Mathf.Clamp(transform.position.y, minY, maxY);
         transform.position = new Vector3(NewX, NewY, transform.position.z);
         //Ensure the camera is still looking at the target
         //We need this because the Lerp and smooth mean the camera will sometimes be slightly behind the character movement.
